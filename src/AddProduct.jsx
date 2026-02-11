@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 export default function AddProduct() {
-
+  const navigate = useNavigate()
   const [title, setTitle] = useState("")
   const [price, setPrice] = useState("")
   const [description, setDescription] = useState("")
@@ -25,6 +26,8 @@ export default function AddProduct() {
     axios.post(url, data)
       .then((res) => {
         console.log(res.data)
+        alert(`Product is added`)
+        navigate(`/product`)
       })
       .catch((err) => {
         console.log(err)

@@ -13,6 +13,9 @@ export default function Categories() {
             <h2 style={{ backgroundColor: "red", border: '1px' }}>child compenent is loaded here</h2>
             <div>
                 <Outlet />
+                <Outlet />
+                <Outlet />
+                <Outlet />
             </div>
         </div>
     )
