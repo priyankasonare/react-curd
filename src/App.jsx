@@ -11,6 +11,7 @@ import Clothing from './Clothing'
 import { Outlet } from 'react-router-dom'
 import Employees from './Empolyees'
 import AddEmployee from './AddEmployee'
+import EditEmployee from './EditEmployee'
 
 //npm i react-router-dom
 
@@ -32,6 +33,7 @@ function App() {
       <Routes>
         <Route path="/employees" element={<Employees />} />
         <Route path="/add-employee" element={<AddEmployee />} />
+        <Route path="/edit-employee/:id" element={<EditEmployee />} />
 
         {/* <Route path="/product" element={<Products />} />
         <Route path="/add" element={<Add />} />

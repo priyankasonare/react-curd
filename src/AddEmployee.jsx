@@ -33,19 +33,14 @@ export default function AddEmployee() {
     }
 
     return (
-        <div>
-            <br />
-            <br />
-            <input type="text" placeholder="name" onChange={(e) => setName(e.target.value)} />
-            <br />
-            <br />
-            <input type="text" placeholder="salary" onChange={(e) => setSalary(e.target.value)} />
-            <br />
-            <br />
-            <input type="text" placeholder="department" onChange={(e) => setDepartment(e.target.value)} />
-            <br />
-            <br />
-            <button type="submit" onClick={addEmployee}>Add Employee</button>
+        <div className="container">
+            <h1 className="text-center">Add Employee</h1>
+            <div className="form-container">
+                <input type="text" placeholder="name" onChange={(e) => setName(e.target.value)} />
+                <input type="text" placeholder="salary" onChange={(e) => setSalary(e.target.value)} />
+                <input type="text" placeholder="department" onChange={(e) => setDepartment(e.target.value)} />
+                <button className="btn-primary" type="submit" onClick={addEmployee}>Add Employee</button>
+            </div>
         </div>
     )
 }
